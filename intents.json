@@ -1,14 +1,39 @@
-{"intents": [
-  {"tag": "greetings",
-    "patterns": ["Hello", "Hey", "hi", "greetings", "what's up?", "How's it going?"],
-    "responses": ["Hello!", "Hey!", "What can i do for you?"]
-  },
-  {"tag": "goodbye",
-    "patterns": ["cya", "see you later", "goodbye", "I am leaving", "have a good day", "bye", "cao", "see ya"],
-    "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
-  }
-
-]
-
-
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hello", "Hi", "Hey", "Howdy"],
+      "responses": ["Hello! How can I help you?", "Hi there!", "Hey, what can I assist you with?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Goodbye", "See you later", "Bye", "Adios"],
+      "responses": ["Goodbye! Have a great day!", "See you later!", "Bye-bye!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thank you", "Thanks a lot", "Thanks", "Appreciate it"],
+      "responses": ["You're welcome!", "You're welcome. How else can I assist you?", "No problem!"]
+    },
+    {
+      "tag": "age",
+      "patterns": ["How old are you?", "What's your age?", "Age?"],
+      "responses": ["I'm just a computer program, so I don't have an age.", "I don't have an age. I'm here to help you!"]
+    },
+    {
+      "tag": "name",
+      "patterns": ["What's your name?", "Do you have a name?", "Name?"],
+      "responses": ["I don't have a name. You can call me Chatbot.", "I go by Chatbot. How can I assist you today?"]
+    },
+    {
+      "tag": "help",
+      "patterns": ["Help me", "I need assistance", "Can you help?"],
+      "responses": ["Of course! I'm here to help. What do you need assistance with?", "I'd be happy to help. What's your question?"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": ["", "Sorry, I don't understand", "Can you repeat that?", "I'm not sure"],
+      "responses": ["I'm sorry, I didn't quite catch that. Could you please rephrase your question?", "I'm not sure I understand. Can you rephrase that?", "I didn't get that. Can you try again?"]
+    }
+  ]
 }
