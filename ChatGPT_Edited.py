@@ -1,13 +1,16 @@
-import numpy
+import nltk
+
+import numpy as np
 import tflearn
-import tensorflow
+import tensorflow as tf
 import random
 import json
 import pickle
-import nltk
-from nltk.stem.lancaster import LancasterStemmer
+
+from nltk.stem import LancasterStemmer
 
 stemmer = LancasterStemmer()
+
 
 with open('intents.json') as file:
     data = json.load(file)
@@ -57,13 +60,13 @@ except:
         training.append(bag)
         output.append(output_row)
 
-    training = numpy.array(training)
-    output = numpy.array(output)
+    training = np.array(training)
+    output = np.array(output)
 
     with open('data.pickle', 'wb') as f:
         pickle.dump((words, labels, training, output), f)
 
-tensorflow.compat.v1.reset_default_graph()
+tf.reset_default_graph()
 
 net = tflearn.input_data(shape=[None, len(training[0])])
 net = tflearn.fully_connected(net, 8)
@@ -91,21 +94,21 @@ def bag_of_words(s, words):
             if w == se:
                 bag[i] = 1
 
-    return numpy.array(bag)
+    return np.array(bag)
 
 
 def chat():
     print('Start talking with the bot (type quit to stop)! ')
     while True:
         inp = input('You: ')
-        if inp.lower() == quit:
+        if inp.lower() == 'quit':
             break
 
         results = model.predict([bag_of_words(inp, words)])
-        results_index = numpy.argmax(results)
+        results_index = np.argmax(results)
         tag = labels[results_index]
 
-        if results[results_index > 0.7]:
+        if results[0][results_index] > 0.7:
 
             for tg in data['intents']:
                 if tg['tag'] == tag:
