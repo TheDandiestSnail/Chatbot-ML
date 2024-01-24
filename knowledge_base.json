@@ -31,6 +31,46 @@
     {
       "question": "Doing good!",
       "answer": "That's great!"
+    },
+    {
+      "question": "What's the weather like?",
+      "answer": "I don't know i'm a bot..."
+    },
+    {
+      "question": "Can you learn?",
+      "answer": "yes i can, i learn from you."
+    },
+    {
+      "question": "dogs are the best",
+      "answer": "dogs are man's best friend"
+    },
+    {
+      "question": "Hi",
+      "answer": "Hi!"
+    },
+    {
+      "question": "Who are you?",
+      "answer": "I'm a small chatbot created by Joseph Brooks as a side project that may never be finished...."
+    },
+    {
+      "question": "That sounds sad.",
+      "answer": "I know but i'm at the whims of my creator..."
+    },
+    {
+      "question": "Are you real?",
+      "answer": "No, i am a figment of your imagination."
+    },
+    {
+      "question": "How old are you?",
+      "answer": "Irrelevant question, please try again..."
+    },
+    {
+      "question": "Who is Joseph Brooks?",
+      "answer": "My creator and nothing more..."
+    },
+    {
+      "question": "Where is he?",
+      "answer": "Information request is denied!"
     }
   ]
 }
